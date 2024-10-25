@@ -2,21 +2,27 @@ import logo from '../assets/logo-footer.png'
 
 export default function Footer() {
     return (
-        <section className="mt-72 pt-60" data-theme="dark">
+        <section className="mt-72 pt-40 relative" data-theme="dark">
             {/* Subscribe Newsletter */}
-            <div className='border py-12' data-theme="light">
-                <h1 className='text-center text-2xl font-semibold'>Subscribe to our Newsletter</h1>
-                <p className='text-center my-3 text-gray-500'>Get the latest updates and news right in your inbox!</p>
-                <div className='text-center'>
-                    <label className="rounded-xl flex justify-center gap-5" htmlFor="email" data-theme="light">
-                        <input type="text" placeholder="Enter your email" className="input focus:outline-none border border-gray-400 w-full max-w-xs" />
-                        <button className="bg-yellow-500 text-lg font-semibold px-5 rounded-xl">Subscribe</button>
-                    </label>
-                </div>
-            </div>
+            <section className='w-full px-5 absolute -top-32'>
+                <section className='p-5 border rounded-2xl max-w-4xl mx-auto bg-white bg-opacity-20'>
+                    <div className='border py-12 mx-auto rounded-2xl bg-hero-banner bg-cover' data-theme="light">
+                        <h1 className='text-center text-2xl font-semibold'>Subscribe to our Newsletter</h1>
+                        <p className='text-center my-3 text-gray-500'>Get the latest updates and news right in your inbox!</p>
+                        <div className=''>
+                            <label className="rounded-xl flex justify-center gap-5 bg-transparent" htmlFor="email" data-theme="light">
+                                <input type="text" placeholder="Enter your email" className="input focus:outline-none border border-gray-400 w-full max-w-xs bg-transparent" />
+                                <button className="bg-yellow-500 text-lg font-semibold px-5 rounded-xl">Subscribe</button>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            {/* Footer Start */}
             <div>
                 <img className='mx-auto py-6' src={logo} alt="" />
             </div>
+            {/* Main Footer Section */}
             <footer className="footer p-10 container mx-auto place-items-center">
                 <nav>
                     <h6 className="footer-title">About Us</h6>
@@ -40,6 +46,7 @@ export default function Footer() {
                     </label>
                 </nav>
             </footer>
+            {/* CopyRights */}
             <div className="divider"></div>
             <h3 className="text-center pb-5">&copy;2024 ShadowCricket All Rights Reserved</h3>
         </section>
