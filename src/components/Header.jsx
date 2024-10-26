@@ -11,7 +11,7 @@ export default function Header({ coins }) {
             </div>
             {/* Menu Section */}
             <div className='md:flex items-center gap-5 mt-5'>
-                <div className='flex flex-wrap gap-4 items-center justify-center'>
+                <div className='flex flex-wrap gap-4 items-center justify-center font-semibold'>
                     <p className='cursor-pointer hover:underline'>Home</p>
                     <p className='cursor-pointer hover:underline'>Fixture</p>
                     <p className='cursor-pointer hover:underline'>Teams</p>

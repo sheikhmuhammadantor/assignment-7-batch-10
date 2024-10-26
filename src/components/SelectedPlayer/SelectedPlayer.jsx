@@ -1,4 +1,5 @@
 import PropTypes from "prop-types"
+import { RiDeleteBin6Line } from "react-icons/ri";
 
 export default function SelectedPlayer({ selectPlayer, handelRemovePlayer }) {
   const { image, name, role, biddingPrice } = selectPlayer
@@ -14,7 +15,7 @@ export default function SelectedPlayer({ selectPlayer, handelRemovePlayer }) {
           </div>
         </div>
       </div>
-      <button onClick={() => handelRemovePlayer(selectPlayer)} className="btn">Delete</button>
+      <button onClick={() => handelRemovePlayer(selectPlayer)} className="btn text-xl text-red-600"><RiDeleteBin6Line /></button>
     </div>
   )
 }

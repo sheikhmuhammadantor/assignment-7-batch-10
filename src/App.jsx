@@ -66,7 +66,7 @@ function App() {
       <main className="container mx-auto px-2">
         <Header coins={coins}></Header>
         <Banner handelGetFreeCoins={handelGetFreeCoins}></Banner>
-        <PlayerBar handelSelected={handelSelected} selected={selected}></PlayerBar>
+        <PlayerBar handelSelected={handelSelected} selected={selected} selectPlayersCount={selectPlayers.length}></PlayerBar>
         {selected ? <SelectedPlayers selectPlayers={selectPlayers} handelSelected={handelSelected} handelRemovePlayer={handelRemovePlayer}></SelectedPlayers> : <Players players={players} handelChoosePlayer={handelChoosePlayer} handelGetFreeCoins={handelGetFreeCoins}></Players>}
       </main>
       <Footer></Footer>
