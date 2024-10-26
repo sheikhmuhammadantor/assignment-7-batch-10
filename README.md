@@ -1,7 +1,7 @@
 # ShadowCricket 🏏
 
-## Live - [Link](https://shadowcricket.netlify.app/)
-## Live - [Link](https://shadowcricket.surge.sh/)
+## Netlify Live - [Link](https://shadowcricket.netlify.app/)
+## Surge Live - [Link](https://shadowcricket.surge.sh/)
 
 
 ShadowCricket is a fantasy cricket team builder built with React, designed for fans to create, manage, and customize their ideal cricket team lineup within a virtual budget. This app offers a smooth, interactive experience where users can handpick players, track their coin balance, and assemble their dream team with ease.A dynamic team management interface help users stay updated on their choices, manage team members, and navigate within budget constraints. Additionally, users can subscribe to a newsletter and enjoy a personalized login experience. With ShadowCricket, cricket fans can bring their dream team to life, combining interactive team management with essential React skills for a fun, skill-enhancing project!
