@@ -20,7 +20,7 @@ export default function Player({ player, handelChoosePlayer }) {
         <h4 className="font-semibold">{battingType}</h4>
         <h4 className="text-gray-500">{bowlingType}</h4>
       </div>
-      <div className="flex flex-wrap justify-between items-center mt-4">
+      <div className="flex flex-wrap justify-between items-center mt-4 gap-4">
         <h3 className="font-semibold">Price: ${biddingPrice}</h3>
         <button onClick={() => handelChoosePlayer(player)} className="btn border border-black bg-transparent font-semibold text-sm md:text-base">Choose Player</button>
       </div>

@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 
-export default function SelectedPlayer({ selectPlayer }) {
+export default function SelectedPlayer({ selectPlayer, handelRemovePlayer }) {
   const { image, name, role, biddingPrice } = selectPlayer
   return (
     <div className="border p-3 rounded-2xl flex justify-between items-center">
@@ -14,13 +14,13 @@ export default function SelectedPlayer({ selectPlayer }) {
           </div>
         </div>
       </div>
-      <button className="btn">Delete</button>
+      <button onClick={() => handelRemovePlayer(selectPlayer)} className="btn">Delete</button>
     </div>
   )
 }
 
 SelectedPlayer.propTypes = {
   selectPlayer: PropTypes.object.isRequired,
-  // handelChoosePlayer: PropTypes.func.isRequired,
+  handelRemovePlayer: PropTypes.func.isRequired,
 };
 

@@ -17,19 +17,34 @@ function App() {
       .then(res => setPlayers(res))
   }, [])
 
-  // ! Selected Players;
+  // ! Selected Section;
   const [selected, setSelected] = useState(false);
 
-  const handelSelected = (id) => {
-    setSelected(id);
-    console.log(id);
+  const handelSelected = (bool) => {
+    setSelected(bool);
   }
 
   // ! Choose Player Button;
   const [selectPlayers, setSelectPlayers] = useState([]);
 
   const handelChoosePlayer = (player) => {
+    const { playerId } = player;
+    const isExist = selectPlayers.find(selectPlayer => selectPlayer.playerId === playerId);
+
+    if (selectPlayers.length >= 6) {
+      return alert("Already 6 Player Added !!");
+    } else if (isExist) {
+      return alert("Already Choose This Player !!");
+    }
     setSelectPlayers([...selectPlayers, player]);
+  }
+
+  // ! Remove Button;
+  const handelRemovePlayer = (player) => {
+    const {playerId} = player;
+    const newSelectPlayers = selectPlayers.filter(selectPlayer => selectPlayer.playerId !== playerId);
+
+    setSelectPlayers(newSelectPlayers);
   }
 
   return (
@@ -38,7 +53,7 @@ function App() {
         <Header></Header>
         <Banner></Banner>
         <PlayerBar handelSelected={handelSelected} selected={selected}></PlayerBar>
-        {selected ? <SelectedPlayers selectPlayers={selectPlayers} handelSelected={handelSelected}></SelectedPlayers> : <Players players={players} handelChoosePlayer={handelChoosePlayer}></Players>}
+        {selected ? <SelectedPlayers selectPlayers={selectPlayers} handelSelected={handelSelected} handelRemovePlayer={handelRemovePlayer}></SelectedPlayers> : <Players players={players} handelChoosePlayer={handelChoosePlayer}></Players>}
       </main>
       <Footer></Footer>
     </>
