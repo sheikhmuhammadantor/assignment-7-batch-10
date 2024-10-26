@@ -1,5 +1,45 @@
 [
   {
+    "playerId": "P001",
+    "name": "Virat Kohli",
+    "country": "India",
+    "image": "https://i.ibb.co.com/M8t1y7D/Virat-Kohli.webp",
+    "role": "Batsman",
+    "battingType": "Right-handed",
+    "bowlingType": "Right-arm medium",
+    "biddingPrice": 2500000
+  },
+  {
+    "playerId": "P002",
+    "name": "Kane Williamson",
+    "country": "New Zealand",
+    "image": "https://i.ibb.co.com/drDY4HM/Kane-Williamson.webp",
+    "role": "Batsman",
+    "battingType": "Right-handed",
+    "bowlingType": "Right-arm off break",
+    "biddingPrice": 2300000
+  },
+  {
+    "playerId": "P003",
+    "name": "Glenn Maxwell",
+    "country": "Australia",
+    "image": "https://i.ibb.co.com/TMVGsnC/Glenn-Maxwell.webp",
+    "role": "All-rounder",
+    "battingType": "Right-handed",
+    "bowlingType": "Right-arm off break",
+    "biddingPrice": 2100000
+  },
+  {
+    "playerId": "P004",
+    "name": "Shaheen Afridi",
+    "country": "Pakistan",
+    "image": "https://i.ibb.co.com/XCFMffL/Shaheen-Afridi.webp",
+    "role": "Bowler",
+    "battingType": "Left-handed",
+    "bowlingType": "Left-arm fast",
+    "biddingPrice": 2000000
+  },
+  {
     "playerId": "P005",
     "name": "AB de Villiers",
     "country": "South Africa",
@@ -88,5 +128,25 @@
     "battingType": "Left-handed",
     "bowlingType": "Right-arm fast-medium",
     "biddingPrice": 2600000
+  },
+  {
+    "playerId": "P014",
+    "name": "David Warner",
+    "country": "Australia",
+    "image": "https://i.ibb.co.com/pj3278x/David-Warner.webp",
+    "role": "Batsman",
+    "battingType": "Left-handed",
+    "bowlingType": "Right-arm leg break",
+    "biddingPrice": 2200000
+  },
+  {
+    "playerId": "P015",
+    "name": "Shakib Al Hasan",
+    "country": "Bangladesh",
+    "image": "https://i.ibb.co.com/26zzd7W/Shakib-Al-Hasan.webp",
+    "role": "All-rounder",
+    "battingType": "Left-handed",
+    "bowlingType": "Left-arm orthodox spin",
+    "biddingPrice": 1900000
   }
 ]

@@ -1,6 +1,6 @@
 import banner from '../assets/banner-main.png'
 
-export default function Banner() {
+export default function Banner({handelGetFreeCoins}) {
   return (
     <div className="bg-hero-banner bg-cover rounded-xl mt-8 py-14 bg-black ">
       <div className='text-center'>
@@ -13,3 +13,9 @@ export default function Banner() {
     </div>
   )
 }
+
+Header.propTypes = {
+    coins: PropTypes.number.isRequired,
+    // handelChoosePlayer: PropTypes.func.isRequired,
+}
+

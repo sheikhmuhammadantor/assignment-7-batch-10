@@ -47,11 +47,18 @@ function App() {
     setSelectPlayers(newSelectPlayers);
   }
 
+  // ! Add Coins;
+  const [coins, setCoins] = useState(500);
+
+  const handelGetFreeCoins = () => {
+    console.log("You Got Free Coins")
+  }
+
   return (
     <>
       <main className="container mx-auto px-2">
-        <Header></Header>
-        <Banner></Banner>
+        <Header coins={coins}></Header>
+        <Banner handelGetFreeCoins={handelGetFreeCoins}></Banner>
         <PlayerBar handelSelected={handelSelected} selected={selected}></PlayerBar>
         {selected ? <SelectedPlayers selectPlayers={selectPlayers} handelSelected={handelSelected} handelRemovePlayer={handelRemovePlayer}></SelectedPlayers> : <Players players={players} handelChoosePlayer={handelChoosePlayer}></Players>}
       </main>
