@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import { FaFlag, FaUser } from "react-icons/fa";
 
-export default function Player({ player }) {
+export default function Player({ player, handelChoosePlayer }) {
   const { name, country, image, role, battingType, bowlingType, biddingPrice } = player;
 
   return (
@@ -22,7 +22,7 @@ export default function Player({ player }) {
       </div>
       <div className="flex flex-wrap justify-between items-center mt-4">
         <h3 className="font-semibold">Price: ${biddingPrice}</h3>
-        <button className="btn border border-black bg-transparent font-semibold text-sm md:text-base">Choose Player</button>
+        <button onClick={() => handelChoosePlayer(player)} className="btn border border-black bg-transparent font-semibold text-sm md:text-base">Choose Player</button>
       </div>
     </div>
   )
@@ -30,4 +30,5 @@ export default function Player({ player }) {
 
 Player.propTypes = {
   player: PropTypes.object.isRequired,
+  handelChoosePlayer: PropTypes.func.isRequired,
 }

@@ -1,13 +1,7 @@
-import { useState } from "react"
+import PropTypes from "prop-types";
 
 
-export default function PlayerBar() {
-  const [selected, setSelected] = useState(false);
-
-  const handelSelected = () => {
-    setSelected(!selected);
-  }
-
+export default function PlayerBar({handelSelected, selected}) {
   return (
     <div className="flex flex-wrap justify-between mt-16">
       <h2 className="text-2xl font-semibold">Available Players</h2>
@@ -18,3 +12,9 @@ export default function PlayerBar() {
     </div>
   )
 }
+
+PlayerBar.propTypes = {
+  handelSelected: PropTypes.func.isRequired,
+  selected: PropTypes.bool.isRequired,
+};
+
