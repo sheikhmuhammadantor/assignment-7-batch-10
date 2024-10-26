@@ -20,8 +20,9 @@ function App() {
   // ! Selected Players;
   const [selected, setSelected] = useState(false);
 
-  const handelSelected = () => {
-    setSelected(!selected);
+  const handelSelected = (id) => {
+    setSelected(id);
+    console.log(id);
   }
 
   // ! Choose Player Button;
@@ -37,7 +38,7 @@ function App() {
         <Header></Header>
         <Banner></Banner>
         <PlayerBar handelSelected={handelSelected} selected={selected}></PlayerBar>
-        {selected ? <SelectedPlayers selectPlayers={selectPlayers}></SelectedPlayers> : <Players players={players} handelChoosePlayer={handelChoosePlayer}></Players>}
+        {selected ? <SelectedPlayers selectPlayers={selectPlayers} handelSelected={handelSelected}></SelectedPlayers> : <Players players={players} handelChoosePlayer={handelChoosePlayer}></Players>}
       </main>
       <Footer></Footer>
     </>
