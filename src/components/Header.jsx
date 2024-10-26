@@ -10,7 +10,7 @@ export default function Header() {
             </div>
             {/* Menu Section */}
             <div className='md:flex items-center gap-5 mt-5'>
-                <div className='flex gap-4 items-center justify-center'>
+                <div className='flex flex-wrap gap-4 items-center justify-center'>
                     <p>Home</p>
                     <p>Fixture</p>
                     <p>Teams</p>

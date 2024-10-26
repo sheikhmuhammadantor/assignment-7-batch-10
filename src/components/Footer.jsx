@@ -2,7 +2,7 @@ import logo from '../assets/logo-footer.png'
 
 export default function Footer() {
     return (
-        <section className="mt-72 pt-40 relative" data-theme="dark">
+        <section className="mt-72 pt-80 sm:pt-40 relative" data-theme="dark">
             {/* Subscribe Newsletter */}
             <section className='w-full px-5 absolute -top-32'>
                 <section className='p-5 border rounded-2xl max-w-4xl mx-auto bg-white bg-opacity-20'>
@@ -10,7 +10,7 @@ export default function Footer() {
                         <h1 className='text-center text-2xl font-semibold'>Subscribe to our Newsletter</h1>
                         <p className='text-center my-3 text-gray-500'>Get the latest updates and news right in your inbox!</p>
                         <div className=''>
-                            <label className="rounded-xl flex justify-center gap-5 bg-transparent" htmlFor="email" data-theme="light">
+                            <label className="rounded-xl flex flex-wrap justify-center gap-5 bg-transparent" htmlFor="email" data-theme="light">
                                 <input type="text" placeholder="Enter your email" className="input focus:outline-none border border-gray-400 w-full max-w-xs bg-transparent" />
                                 <button className="bg-yellow-500 text-lg font-semibold px-5 rounded-xl">Subscribe</button>
                             </label>
@@ -40,7 +40,7 @@ export default function Footer() {
                 <nav>
                     <h6 className="footer-title">Subscribe</h6>
                     <a className="link link-hover">Subscribe to our newsletter for the <br /> latest updates.</a>
-                    <label className="rounded-xl flex " htmlFor="email" data-theme="light">
+                    <label className="rounded-xl flex" htmlFor="email" data-theme="light">
                         <input type="text" placeholder="Enter your email" className="input border-none w-full max-w-xs" />
                         <button className="bg-yellow-500 text-lg font-semibold px-5 rounded-e-xl">Subscribe</button>
                     </label>
