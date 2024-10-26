@@ -21,7 +21,7 @@ export default function Header({ coins }) {
                 <div className='mt-6 md:mt-0 text-center '>
                     <button className='btn bg-transparent border-2'>
                         <span className='font-bold'>{coins}</span>
-                        Coins
+                        Coin
                         <i className='text-yellow-500'><BsCoin /></i>
                     </button>
                 </div>
@@ -32,5 +32,4 @@ export default function Header({ coins }) {
 
 Header.propTypes = {
     coins: PropTypes.number.isRequired,
-    // handelChoosePlayer: PropTypes.func.isRequired,
 }

@@ -42,7 +42,6 @@ export default function Footer() {
                     <a className="link link-hover">Subscribe to our newsletter for the <br /> latest updates.</a>
                     <label className="rounded-xl flex" htmlFor="email" data-theme="light">
                         <input type="text" placeholder="Enter your email" className="input border-none w-full max-w-xs" />
-                        {/* <button className="bg-yellow-500 text-lg font-semibold px-5 rounded-e-xl">Subscribe</button> */}
                         <button className="bg-yellow-500 text-lg font-semibold px-5 rounded-e-xl bg-gradient-to-r from-pink-400 to-yellow-500 border-0">Subscribe</button>
                     </label>
                 </nav>

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import { RiDeleteBin6Line } from "react-icons/ri";
+import { MdDeleteForever } from "react-icons/md";
 
 export default function SelectedPlayer({ selectPlayer, handelRemovePlayer }) {
   const { image, name, role, biddingPrice } = selectPlayer
@@ -15,7 +15,7 @@ export default function SelectedPlayer({ selectPlayer, handelRemovePlayer }) {
           </div>
         </div>
       </div>
-      <button onClick={() => handelRemovePlayer(selectPlayer)} className="btn text-xl text-red-600"><RiDeleteBin6Line /></button>
+      <button onClick={() => handelRemovePlayer(selectPlayer)} className="btn text-2xl text-red-500"><MdDeleteForever /></button>
     </div>
   )
 }
@@ -24,4 +24,3 @@ SelectedPlayer.propTypes = {
   selectPlayer: PropTypes.object.isRequired,
   handelRemovePlayer: PropTypes.func.isRequired,
 };
-

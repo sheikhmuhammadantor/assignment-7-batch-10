@@ -19,4 +19,3 @@ SelectedPlayers.propTypes = {
   handelSelected: PropTypes.func.isRequired,
   handelRemovePlayer: PropTypes.func.isRequired,
 };
-

@@ -5,6 +5,9 @@ import Header from "./components/Header"
 import PlayerBar from "./components/PlayerBar"
 import Players from './components/Player/Players'
 import SelectedPlayers from "./components/SelectedPlayer/SelectedPlayers"
+// Use React Toastify Library;
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -28,9 +31,22 @@ function App() {
   const [coins, setCoins] = useState(0);
 
   const handelGetFreeCoins = (status, quantity) => {
-    if (status === 'add') setCoins(coins + quantity);
-    if (status === 'remove') {
-      if (coins < quantity) return alert("You Haven't Enough Money !!");
+
+    if (status === 'add') {
+      setCoins(coins + quantity);
+      return toast.success("Successfully Claim Free Credit !!", {
+        position: "top-center",
+        autoClose: 1500,
+        draggable: true,
+      });
+    } else if (status === 'remove') {
+      if (coins < quantity) {
+        return toast.warn("You Haven't Enough Money !!", {
+          position: "top-center",
+          autoClose: 1500,
+          draggable: true,
+        })
+      } else if (selectPlayers.length >= 6) return;
       setCoins(coins - quantity);
     }
   }
@@ -43,13 +59,28 @@ function App() {
     const isExist = selectPlayers.find(selectPlayer => selectPlayer.playerId === playerId);
 
     if (selectPlayers.length >= 6) {
-      return alert("Already 6 Player Added !!");
+      return toast.warn("Already 6 Player Added !!", {
+        position: "top-center",
+        autoClose: 1500,
+        draggable: true,
+      });
     } else if (isExist) {
-      return alert("Already Choose This Player !!");
+      return toast.warn("Already Choose This Player !!", {
+        position: "top-center",
+        autoClose: 1500,
+        draggable: true,
+      });
     } else if (coins < biddingPrice) {
       return;
     }
-    setSelectPlayers([...selectPlayers, player]);
+    else {
+      setSelectPlayers([...selectPlayers, player]);
+      toast.success("Successfully Choose The Player !!", {
+        position: "top-center",
+        autoClose: 1500,
+        draggable: true,
+      });
+    }
   }
 
   // ! Remove Button;
@@ -58,6 +89,11 @@ function App() {
     const newSelectPlayers = selectPlayers.filter(selectPlayer => selectPlayer.playerId !== playerId);
 
     setSelectPlayers(newSelectPlayers);
+    toast.warn("Player Removed !!", {
+      position: "top-center",
+      autoClose: 1500,
+      draggable: true,
+    });
   }
 
 
@@ -70,6 +106,7 @@ function App() {
         {selected ? <SelectedPlayers selectPlayers={selectPlayers} handelSelected={handelSelected} handelRemovePlayer={handelRemovePlayer}></SelectedPlayers> : <Players players={players} handelChoosePlayer={handelChoosePlayer} handelGetFreeCoins={handelGetFreeCoins}></Players>}
       </main>
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
     </>
   )
 }

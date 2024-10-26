@@ -22,7 +22,7 @@ export default function Player({ player, handelChoosePlayer, handelGetFreeCoins 
       </div>
       <div className="flex flex-wrap justify-between items-center mt-4 gap-4">
         <h3 className="font-semibold">Price: ${biddingPrice}</h3>
-        <button onClick={() => {handelChoosePlayer(player); handelGetFreeCoins('remove', biddingPrice)}} className="btn border border-black bg-transparent font-semibold text-sm md:text-base">Choose Player</button>
+        <button onClick={() => { handelChoosePlayer(player); handelGetFreeCoins('remove', biddingPrice) }} className="btn border border-black bg-transparent font-semibold text-sm md:text-base">Choose Player</button>
       </div>
     </div>
   )
