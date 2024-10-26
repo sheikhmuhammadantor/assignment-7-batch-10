@@ -12,7 +12,7 @@ export default function Footer() {
                         <div className=''>
                             <label className="rounded-xl flex flex-wrap justify-center gap-5 bg-transparent" htmlFor="email" data-theme="light">
                                 <input type="text" placeholder="Enter your email" className="input focus:outline-none border border-gray-400 w-full max-w-xs bg-transparent" />
-                                <button className="bg-yellow-500 text-lg font-semibold px-5 rounded-xl">Subscribe</button>
+                                <button className="btn text-lg px-5 rounded-xl bg-gradient-to-r from-pink-400 to-yellow-500 border-0">Subscribe</button>
                             </label>
                         </div>
                     </div>
@@ -42,7 +42,8 @@ export default function Footer() {
                     <a className="link link-hover">Subscribe to our newsletter for the <br /> latest updates.</a>
                     <label className="rounded-xl flex" htmlFor="email" data-theme="light">
                         <input type="text" placeholder="Enter your email" className="input border-none w-full max-w-xs" />
-                        <button className="bg-yellow-500 text-lg font-semibold px-5 rounded-e-xl">Subscribe</button>
+                        {/* <button className="bg-yellow-500 text-lg font-semibold px-5 rounded-e-xl">Subscribe</button> */}
+                        <button className="bg-yellow-500 text-lg font-semibold px-5 rounded-e-xl bg-gradient-to-r from-pink-400 to-yellow-500 border-0">Subscribe</button>
                     </label>
                 </nav>
             </footer>
